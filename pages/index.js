@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Header from "@/components/header";
+import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 
 export default function Home() {
