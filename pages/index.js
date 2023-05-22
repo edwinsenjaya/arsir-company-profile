@@ -12,13 +12,6 @@ export default function Home() {
       </Head>
       <Header></Header>
       <HeroBanner></HeroBanner>
-      <div
-        style={{
-          height: "1000px",
-          width: "100%",
-          backgroundImage: "linear-gradient(lightgrey, #303030)",
-        }}
-      ></div>
     </>
   );
 }

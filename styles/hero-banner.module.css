@@ -1,7 +1,45 @@
-.hero-banner-container {
+.carousel-item-container {
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 680px;
-  background-color: grey;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: 1280px;
+}
+
+.carousel-image {
+  height: 720px;
+  width: 1280px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 1280px) {
+  .fade-cover-right {
+    left: calc(((100vw - 1280px) / 2) - 10px);
+  }
+
+  .fade-cover-left {
+    right: calc(((100vw - 1280px) / 2) - 10px);
+  }
+
+  .image-container,
+  .carousel-image {
+    height: auto;
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .fade-cover-right {
+    left: 0;
+  }
+
+  .fade-cover-left {
+    right: 0;
+  }
 }
