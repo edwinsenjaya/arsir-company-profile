@@ -49,6 +49,7 @@ export default function HeroBanner() {
         style={{
           background: "linear-gradient(to right, #1b1b1d, transparent)",
         }}
+
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
