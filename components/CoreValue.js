@@ -1,4 +1,5 @@
 import styles from "@/styles/core-value.module.css";
+import Link from "next/link";
 
 export default function CoreValue() {
   return (
@@ -17,9 +18,9 @@ export default function CoreValue() {
           believes that architecture is not all about aesthetics, but
           architecture should be profitable and cost effective.
         </p>
-        <a href="/#contact-us" className={styles["contact-us"]}>
+        <Link href="/#contact-us" className={styles["contact-us"]}>
           Contact Us
-        </a>
+        </Link>
       </div>
     </section>
   );
