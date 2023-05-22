@@ -12,13 +12,6 @@ export default function Home() {
       </Head>
       <Header></Header>
       <HeroBanner></HeroBanner>
-      <div
-        style={{
-          height: "200px",
-          width: "100%",
-          background: "black",
-        }}
-      ></div>
     </>
   );
 }

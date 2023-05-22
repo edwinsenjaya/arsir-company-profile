@@ -1,16 +1,24 @@
 .header-container {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+}
+
+.content-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 70px;
-  background: black;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  height: 85px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
   font-family: "Rubik";
-  position: sticky;
-  top: 0;
+  position: absolute;
   width: 100%;
-  z-index: 5;
+  transition: background 0.2s ease-in-out;
+}
+
+.content-container:hover {
+  background: #1b1b1d;
 }
 
 .text {
@@ -38,13 +46,13 @@
 }
 
 @media only screen and (min-width: 1280px) {
-  .header-container {
+  .content-container {
     padding: 0 calc((100vw - 1280px) / 2 + 85px);
   }
 }
 
 @media only screen and (max-width: 1279px) {
-  .header-container {
+  .content-container {
     padding: 0 85px;
   }
 

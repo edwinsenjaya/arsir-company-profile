@@ -1,6 +1,6 @@
 .carousel-item-container {
-  height: 720px;
-  background: #171717;
+  height: 100vh;
+  width: 100vw;
   display: flex;
   justify-content: center;
 }
@@ -18,20 +18,6 @@
   object-fit: cover;
 }
 
-.fade-cover-right {
-  position: absolute;
-  height: 100%;
-  width: 130px;
-  background: linear-gradient(to right, #171717, transparent);
-}
-
-.fade-cover-left {
-  position: absolute;
-  height: 100%;
-  width: 130px;
-  background: linear-gradient(to left, #171717, transparent);
-}
-
 @media only screen and (min-width: 1280px) {
   .fade-cover-right {
     left: calc(((100vw - 1280px) / 2) - 10px);
@@ -39,6 +25,12 @@
 
   .fade-cover-left {
     right: calc(((100vw - 1280px) / 2) - 10px);
+  }
+
+  .image-container,
+  .carousel-image {
+    height: auto;
+    width: 100vw;
   }
 }
 
