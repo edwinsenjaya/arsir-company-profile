@@ -14,7 +14,7 @@
   font-family: "Rubik";
   position: absolute;
   width: 100%;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 
 .content-container:hover {
