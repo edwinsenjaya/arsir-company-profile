@@ -6,9 +6,9 @@ export default function Document() {
       <Head>
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap"
         />
-        <link rel="icon" href="/images/arsir-architect-logo.png" />
+        <link rel="icon" href="/images/arsir-architect-white-1.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

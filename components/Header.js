@@ -9,7 +9,7 @@ export default function Header() {
         <section className={styles["logo-container"]}>
           <Link href="/">
             <Image
-              src="/images/arsir-architect-logo.png"
+              src="/images/arsir-architect-white-1.png"
               height={85}
               width={85}
               alt="logo"
