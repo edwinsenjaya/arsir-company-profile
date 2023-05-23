@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import CoreValue from "@/components/CoreValue";
 import Footer from "@/components/Footer";
+import Thumbnail from "@/components/Thumbnail";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Header></Header>
       <HeroBanner></HeroBanner>
       <CoreValue></CoreValue>
+      <Thumbnail></Thumbnail>
       <Footer></Footer>
     </>
   );
