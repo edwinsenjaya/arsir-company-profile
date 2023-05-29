@@ -15,10 +15,12 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin="true"
         />
+        <link rel="stylesheet" type="text/css" href="glider.css"></link>
       </Head>
       <body>
         <Main />
         <NextScript />
+        <script src="glider.js"></script>
       </body>
     </Html>
   );
