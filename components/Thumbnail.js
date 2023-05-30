@@ -1,8 +1,17 @@
 import styles from "@/styles/thumbnail.module.css";
 
 export default function Thumbnail() {
-  const thumbnailImages = [];
+  const randomOrder = [];
   for (let i = 0; i < 13; i++) {
+    let randomNumber = Math.floor(Math.random() * 13) + 1;
+    if (randomOrder.includes(randomNumber)) {
+      randomNumber = Math.floor(Math.random() * 13) + 1;
+    }
+    randomOrder.push(randomNumber);
+  }
+
+  const thumbnailImages = [];
+  for (let i = 0; i < randomOrder.length; i++) {
     thumbnailImages.push(
       <div
         key={i}
@@ -11,8 +20,8 @@ export default function Thumbnail() {
       >
         <img
           className={styles["thumbnail-image"]}
-          src={`/images/thumbnail-${i + 1}.jpg`}
-          alt={`thumbnail-${i + 1}`}
+          src={`/images/thumbnail-${randomOrder[i]}.jpg`}
+          alt={`thumbnail-${randomOrder[i]}`}
         />
       </div>
     );

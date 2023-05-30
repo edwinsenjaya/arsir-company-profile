@@ -1,4 +1,5 @@
 import styles from "@/styles/hero-banner.module.css";
+import Image from "next/image";
 
 export default function HeroBanner() {
   const carouselIndicators = [];
@@ -39,6 +40,9 @@ export default function HeroBanner() {
       className="carousel slide"
       data-bs-ride="true"
     >
+      <div className={styles["cover"]}>
+        <Image src="/gif/arsir.gif" alt="arsir.gif" width={800} height={800} />
+      </div>
       <div className="carousel-indicators">{carouselIndicators}</div>
       <div className="carousel-inner">{carouselItems}</div>
       <button
@@ -49,7 +53,6 @@ export default function HeroBanner() {
         style={{
           background: "linear-gradient(to right, #1b1b1d, transparent)",
         }}
-
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>

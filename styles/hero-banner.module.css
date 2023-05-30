@@ -1,3 +1,28 @@
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: calc(100vw - 15px);
+  height: 100vh;
+  background: #f2f2f2;
+  z-index: 10;
+  animation: fadeOut ease 6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .carousel-item-container {
   height: 100vh;
   width: 100vw;
