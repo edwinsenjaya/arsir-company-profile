@@ -1,16 +1,23 @@
 import styles from "@/styles/core-value.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function CoreValue() {
   return (
     <section className={styles["core-value-container"]}>
       <div className={styles["content-container"]}>
-        <img
+        {/* <img
           className={styles["background-image"]}
           src="/images/hero-banner-6.jpeg"
           alt="background-image"
+        /> */}
+        {/* <h2 className={styles.title}>ARSIR ARCHITECT</h2> */}
+        <Image
+          src="/images/arsir-only-logo.png"
+          alt="arsir"
+          width={700}
+          height={184.8}
         />
-        <h2 className={styles.title}>ARSIR ARCHITECT</h2>
         <p className={styles.paragraph}>
           Arsir comes from an anagram that represents what the company provides
           to each Client. The firm provides consultancy in ARchitectural

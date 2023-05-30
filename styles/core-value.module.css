@@ -51,6 +51,5 @@
 @media only screen and (min-width: 1280px) {
   .core-value-container {
     padding: 60px 30px 30px;
-    /* padding: 60px calc(((100vw - 1280px) / 2) + 30px) 30px; */
   }
 }
