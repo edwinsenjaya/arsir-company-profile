@@ -4,7 +4,7 @@ export default function Thumbnail() {
   const randomOrder = [];
   for (let i = 0; i < 13; i++) {
     let randomNumber = Math.floor(Math.random() * 13) + 1;
-    if (randomOrder.includes(randomNumber)) {
+    while (randomOrder.includes(randomNumber)) {
       randomNumber = Math.floor(Math.random() * 13) + 1;
     }
     randomOrder.push(randomNumber);
