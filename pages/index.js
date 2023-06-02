@@ -1,9 +1,13 @@
+import dynamic from "next/dynamic";
+
 import Head from "next/head";
 import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import CoreValue from "@/components/CoreValue";
 import Footer from "@/components/Footer";
-import Thumbnail from "@/components/Thumbnail";
+const Thumbnail = dynamic(() => import("@/components/Thumbnail"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
