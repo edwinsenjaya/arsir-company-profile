@@ -6,12 +6,6 @@ export default function CoreValue() {
   return (
     <section className={styles["core-value-container"]}>
       <div className={styles["content-container"]}>
-        {/* <img
-          className={styles["background-image"]}
-          src="/images/hero-banner-6.jpeg"
-          alt="background-image"
-        /> */}
-        {/* <h2 className={styles.title}>ARSIR ARCHITECT</h2> */}
         <Image
           src="/images/arsir-only-logo.png"
           alt="arsir"
