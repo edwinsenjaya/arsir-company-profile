@@ -40,8 +40,6 @@
 }
 
 .carousel-image {
-  height: 720px;
-  width: 1280px;
   object-fit: cover;
 }
 
