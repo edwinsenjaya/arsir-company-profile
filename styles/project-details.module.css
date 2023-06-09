@@ -1,0 +1,21 @@
+.project-details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  background: #f2f2f2;
+  padding: 20px 150px;
+  font-family: "EB Garamond";
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .project-details-container {
+    padding: 20px calc(((100vw - 1280px) / 2) + 150px);
+  }
+}
