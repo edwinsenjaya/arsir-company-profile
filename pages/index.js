@@ -6,7 +6,6 @@ import HeroBanner from "@/components/HeroBanner";
 import CoreValue from "@/components/CoreValue";
 import Footer from "@/components/Footer";
 const Thumbnail = dynamic(() => import("@/components/Thumbnail"), {
-  loading: () => <p>Loading...</p>,
   ssr: false,
 });
 

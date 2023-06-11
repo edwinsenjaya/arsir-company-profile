@@ -2,9 +2,7 @@ import dynamic from "next/dynamic";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-const ProjectBanner = dynamic(() => import("@/components/ProjectBanner"), {
-  ssr: false,
-});
+import ProjectBanner from "@/components/ProjectBanner";
 
 const ProjectDetails = dynamic(() => import("@/components/ProjectDetails"), {
   ssr: false,
