@@ -1,28 +1,19 @@
-.project-title {
-  font-size: 35px;
-  font-family: "EB Garamond";
-  text-align: center;
-  background: #f2f2f2;
-  color: #1b1b1d;
-  padding-top: 85px;
-}
-
 .carousel-item-container {
-  height: calc(100vh - 137.5px);
-  width: auto;
   display: flex;
   justify-content: center;
+  height: calc(100vh - 137.5px);
+  width: auto;
+  padding-top: 85px;
 }
 
 .image-container {
   display: flex;
   justify-content: center;
-  height: 100%;
-  width: 1280px;
 }
 
 .carousel-image {
-  object-fit: cover;
+  object-fit: contain;
+  max-width: 85%;
 }
 
 @media only screen and (min-width: 1280px) {
