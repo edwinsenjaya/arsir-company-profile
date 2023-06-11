@@ -6,19 +6,14 @@
   background: #f2f2f2;
   padding: 20px 100px;
   font-family: "EB Garamond";
-}
-
-.project-title {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 0 45px;
-  gap: 320px;
+  gap: 32px;
 }
 
 .project-name {
   font-size: 35px;
   font-family: "EB Garamond";
   font-weight: 600;
+  margin-top: 30px;
 }
 
 .project-link {
@@ -26,7 +21,6 @@
   font-family: "EB Garamond";
   font-weight: 600;
   font-style: italic;
-  padding-top: 20px;
   color: black;
 }
 

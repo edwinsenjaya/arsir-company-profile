@@ -4,14 +4,12 @@ import { useRouter } from "next/router";
 
 export default function ProjectDetails() {
   const projectsData = JSON.parse(localStorage.getItem("projectsData"));
-  let indexLeft;
   let indexRight;
 
   const router = useRouter();
   let projectName = router.query.name;
 
   const project = projectsData?.find((el, i) => {
-    i - 1 < 0 ? (indexLeft = projectsData.length - 1) : (indexLeft = i - 1);
     i + 1 === projectsData.length ? (indexRight = 0) : (indexRight = i + 1);
     return el.name === projectName?.replace("_", " ");
   });
@@ -20,23 +18,14 @@ export default function ProjectDetails() {
     return name.replace(" ", "_");
   }
 
+  const bootstrapCarousel = document.getElementById("carouselProjectBanner");
+  function scrollCarousel() {
+    bootstrapCarousel?.carousel(0);
+  }
+
   return (
     <section className={styles["project-details-container"]}>
-      <section className={styles["project-title"]}>
-        <Link
-          href={`/project/${formatProjectName(projectsData[indexLeft]?.name)}`}
-          className={styles["project-link"]}
-        >
-          &#x2190; {projectsData[indexLeft]?.name}
-        </Link>
-        <h4 className={styles["project-name"]}>{project?.name}</h4>
-        <Link
-          href={`/project/${formatProjectName(projectsData[indexRight]?.name)}`}
-          className={styles["project-link"]}
-        >
-          {projectsData[indexRight]?.name} &#x2192;
-        </Link>
-      </section>
+      <h4 className={styles["project-name"]}>{project?.name}</h4>
       <section className={styles["project-info"]}>
         <section className={styles["project-details"]}>
           <h5 className={styles.title}>Type</h5>
@@ -59,6 +48,13 @@ export default function ProjectDetails() {
           <h5 className={styles.info}>{project?.scope}</h5>
         </section>
       </section>
+      <Link
+        href={`/project/${formatProjectName(projectsData[indexRight]?.name)}`}
+        className={styles["project-link"]}
+        onClick={scrollCarousel}
+      >
+        Next Project &#x2192;
+      </Link>
     </section>
   );
 }
