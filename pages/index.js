@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import HeroBanner from "@/components/HeroBanner";
 import CoreValue from "@/components/CoreValue";
 import Footer from "@/components/Footer";
+import WhatWeDo from "@/components/WhatWeDo";
 const Thumbnail = dynamic(() => import("@/components/Thumbnail"), {
   ssr: false,
 });
@@ -21,6 +22,7 @@ export default function Home() {
       <HeroBanner></HeroBanner>
       <CoreValue></CoreValue>
       <Thumbnail></Thumbnail>
+      <WhatWeDo></WhatWeDo>
       <Footer></Footer>
     </>
   );
