@@ -2,8 +2,6 @@ import styles from "@/styles/hero-banner.module.css";
 import Image from "next/image";
 
 export default function HeroBanner() {
-  const bootstrapCarousel = document.getElementById("carouselProjectBanner");
-  bootstrapCarousel?.carousel("cycle");
   const carouselIndicators = [];
   const carouselItems = [];
   for (let i = 0; i < 7; i++) {
