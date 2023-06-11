@@ -1,69 +1,19 @@
 import styles from "@/styles/project-banner.module.css";
 import { useRouter } from "next/router";
-import { useState } from "react";
 
 export default function ProjectBanner() {
-  const [projectsData, setProjectsData] = useState([
-    {
-      name: "KS House",
-      numberOfImages: 4,
-    },
-    {
-      name: "SA House",
-      numberOfImages: 4,
-    },
-    {
-      name: "TC House",
-      numberOfImages: 8,
-    },
-    {
-      name: "AW House",
-      numberOfImages: 8,
-    },
-    {
-      name: "CC House",
-      numberOfImages: 4,
-    },
-    {
-      name: "GB Apartment",
-      numberOfImages: 4,
-    },
-    {
-      name: "YB House",
-      numberOfImages: 5,
-    },
-    {
-      name: "JH House",
-      numberOfImages: 4,
-    },
-    {
-      name: "JN Resort",
-      numberOfImages: 4,
-    },
-    {
-      name: "DJ House",
-      numberOfImages: 10,
-    },
-    {
-      name: "SV House",
-      numberOfImages: 5,
-    },
-    {
-      name: "OJ House",
-      numberOfImages: 4,
-    },
-  ]);
+  const projectsData = JSON.parse(localStorage.getItem("projectsData"));
 
   const router = useRouter();
   let projectName = router.query.name;
 
   const project = projectsData.find((el) => {
-    return el.name === projectName.replace("_", " ");
+    return el.name === projectName?.replace("_", " ");
   });
 
   const carouselIndicators = [];
   const carouselItems = [];
-  for (let i = 0; i < project.numberOfImages; i++) {
+  for (let i = 0; i < project?.numberOfImages; i++) {
     carouselIndicators.push(
       <button
         key={i}
@@ -98,8 +48,8 @@ export default function ProjectBanner() {
       id="carouselProjectBanner"
       className="carousel slide"
       data-bs-ride="true"
+      style={{ background: "#f2f2f2" }}
     >
-      <div className={styles["project-title"]}>{project.name}</div>
       <div className="carousel-indicators">{carouselIndicators}</div>
       <div className="carousel-inner">{carouselItems}</div>
       <button
@@ -108,7 +58,7 @@ export default function ProjectBanner() {
         data-bs-target="#carouselProjectBanner"
         data-bs-slide="prev"
         style={{
-          background: "linear-gradient(to right, #1b1b1d, transparent)",
+          filter: "brightness(0%)",
         }}
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -120,7 +70,7 @@ export default function ProjectBanner() {
         data-bs-target="#carouselProjectBanner"
         data-bs-slide="next"
         style={{
-          background: "linear-gradient(to left, #1b1b1d, transparent)",
+          filter: "brightness(0%)",
         }}
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
