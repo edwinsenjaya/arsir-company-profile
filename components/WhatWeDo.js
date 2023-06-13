@@ -23,10 +23,10 @@ export default function WhatWeDo() {
     whatWeDoContent.push(
       <section className={styles["image-container"]} key={key}>
         <Image
-          src={`/what-we-do/${key}.png`}
+          src={`/what-we-do-grey/${key}.png`}
           width={150}
           height={150}
-          alt={`/what-we-do/${key}.png`}
+          alt={`${key}.png`}
           className={styles.image}
         />
         <h3 className={styles.title}>{capitalize(key)}</h3>

@@ -5,20 +5,20 @@
   height: 300px;
   background: #f2f2f2;
   padding: 20px 100px;
-  font-family: "EB Garamond";
+  font-family: "Nunito Sans";
   gap: 32px;
 }
 
 .project-name {
   font-size: 35px;
-  font-family: "EB Garamond";
+  font-family: "Nunito Sans";
   font-weight: 600;
   margin-top: 30px;
 }
 
 .project-link {
   font-size: 16px;
-  font-family: "EB Garamond";
+  font-family: "Nunito Sans";
   font-weight: 600;
   font-style: italic;
   color: black;

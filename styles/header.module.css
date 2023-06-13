@@ -11,14 +11,10 @@
   justify-content: space-between;
   height: 85px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-  font-family: "EB Garamond";
+  font-family: "Nunito Sans";
   position: absolute;
   width: 100%;
-  transition: background 0.4s ease-in-out;
-}
-
-.content-container:hover {
-  background: #1b1b1d;
+  transition: background 0.35s ease-in-out;
 }
 
 .text {
