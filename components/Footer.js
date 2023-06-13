@@ -33,9 +33,9 @@ export default function Footer() {
       </section>
       <section>
         <Image
-          src="/images/arsir-architect-white-1.png"
-          width={100}
-          height={100}
+          src="/images/arsir-architect-white.png"
+          height={30}
+          width={148.38}
           alt="email.png"
         />
       </section>

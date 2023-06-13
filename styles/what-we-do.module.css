@@ -1,17 +1,18 @@
 .what-we-do-title {
   font-size: 24px;
   font-weight: 600;
-  font-family: "EB-Garamond";
+  font-family: "Nunito Sans";
   text-align: center;
   padding-top: 60px;
   background: #f2f2f2;
   margin-bottom: 0;
+  color: #1b1b1d;
 }
 
 .what-we-do-container {
   display: flex;
   justify-content: center;
-  font-family: "EB-Garamond";
+  font-family: "Nunito Sans";
   background: #f2f2f2;
   padding: 30px 40px 60px;
   gap: 25px;
@@ -34,10 +35,13 @@
 .title {
   font-size: 22px;
   font-weight: 600;
+  color: #1b1b1d;
 }
 
 .description {
   font-size: 16px;
   text-align: center;
   height: 90px;
+  color: #575757;
+  font-weight: 400;
 }
