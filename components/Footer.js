@@ -3,6 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    document.querySelector("#home").scrollIntoView();
+  };
+
   return (
     <section className={styles["footer-container"]}>
       <section className={styles["info-container"]}>
@@ -21,14 +26,14 @@ export default function Footer() {
           </Link>
         </section>
         <section className={styles["arsir-logo"]}>
-          <a href="/#home">
+          <div className={styles["scroll-top"]} onClick={scrollToTop}>
             <Image
               src="/images/arsir-architect-grey.png"
               width={200}
               height={200}
               alt="arsir-architect-grey.png"
             />
-          </a>
+          </div>
         </section>
         <section className={styles.address}>
           <h6 className={styles.text}>Jl. Sriwijaya No.10</h6>

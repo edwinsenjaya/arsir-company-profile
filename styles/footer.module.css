@@ -42,6 +42,10 @@
   align-items: center;
 }
 
+.scroll-top {
+  cursor: pointer;
+}
+
 .social-media {
   display: flex;
   align-items: center;
