@@ -9,7 +9,7 @@ export default function HeroBanner() {
       <button
         key={i}
         type="button"
-        data-bs-target="#carouselHeroBanner"
+        data-bs-target="#home"
         data-bs-slide-to={i}
         className={i === 0 ? "active" : ""}
         aria-current={i === 0 ? "true" : ""}
@@ -35,11 +35,7 @@ export default function HeroBanner() {
   }
 
   return (
-    <section
-      id="carouselHeroBanner"
-      className="carousel slide"
-      data-bs-ride="true"
-    >
+    <section id="home" className="carousel slide" data-bs-ride="true">
       <div className={styles["cover"]}>
         <Image src="/gif/arsir.gif" alt="arsir.gif" width={800} height={800} />
       </div>
@@ -48,7 +44,7 @@ export default function HeroBanner() {
       <button
         className="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselHeroBanner"
+        data-bs-target="#home"
         data-bs-slide="prev"
         style={{
           background: "linear-gradient(to right, #1b1b1d, transparent)",
@@ -60,7 +56,7 @@ export default function HeroBanner() {
       <button
         className="carousel-control-next"
         type="button"
-        data-bs-target="#carouselHeroBanner"
+        data-bs-target="#home"
         data-bs-slide="next"
         style={{
           background: "linear-gradient(to left, #1b1b1d, transparent)",
