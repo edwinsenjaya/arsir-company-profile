@@ -1,11 +1,17 @@
 import styles from "@/styles/footer.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
   const scrollToTop = (e) => {
     e.preventDefault();
-    document.querySelector("#home").scrollIntoView();
+    if (router.pathname === "/") {
+      document.querySelector("#home").scrollIntoView();
+    } else {
+      window.location.assign("../");
+    }
   };
 
   return (
@@ -28,7 +34,7 @@ export default function Footer() {
         <section className={styles["arsir-logo"]}>
           <div className={styles["scroll-top"]} onClick={scrollToTop}>
             <Image
-              src="/images/arsir-architect-grey.png"
+              src="/images/arsir-architect-white-1.png"
               width={200}
               height={200}
               alt="arsir-architect-grey.png"
@@ -45,7 +51,7 @@ export default function Footer() {
       <section className={styles["social-media"]}>
         <Link href="mailto:arsirarchitect@gmail.com" target="_blank">
           <Image
-            src="/footer/email-clean.png"
+            src="/footer/email.png"
             width={35}
             height={35}
             alt="email.png"
@@ -53,7 +59,7 @@ export default function Footer() {
         </Link>
         <Link href="https://www.instagram.com/arsirarchitect/" target="_blank">
           <Image
-            src="/footer/instagram-clean.png"
+            src="/footer/instagram.png"
             width={35}
             height={35}
             alt="instagram.png"
@@ -61,7 +67,7 @@ export default function Footer() {
         </Link>
         <Link href="https://wa.me/6281389007566" target="_blank">
           <Image
-            src="/footer/whatsapp-clean.png"
+            src="/footer/whatsapp.png"
             width={35}
             height={35}
             alt="whatsapp.png"
