@@ -161,6 +161,7 @@ export default function Thumbnail() {
     projectList.push(projectsData[randomOrder[i]]);
   }
   localStorage.setItem("projectsData", JSON.stringify(projectList));
+  localStorage.setItem("projects", JSON.stringify(projectsData));
 
   return (
     <section className={styles["thumbnail-wrapper"]}>
