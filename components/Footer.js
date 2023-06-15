@@ -27,8 +27,8 @@ export default function Footer() {
           <Link href="/about-us" className={styles.text}>
             About Us
           </Link>
-          <Link href="/contact" className={styles.text}>
-            Contact
+          <Link href="/contact-us" className={styles.text}>
+            Contact Us
           </Link>
         </section>
         <section className={styles["arsir-logo"]}>

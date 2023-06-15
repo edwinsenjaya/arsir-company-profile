@@ -19,7 +19,7 @@ export default function CoreValue() {
           believes that architecture is not all about aesthetics, but
           architecture should be profitable and cost effective.
         </p>
-        <Link href="/#contact-us" className={styles["contact-us"]}>
+        <Link href="/contact-us" className={styles["contact-us"]}>
           Contact Us
         </Link>
       </div>
