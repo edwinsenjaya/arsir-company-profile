@@ -1,0 +1,68 @@
+.project-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  background: #f2f2f2;
+  font-family: "Nunito Sans";
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: 400px;
+  padding: 0 20px;
+}
+
+.image-wrapper {
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.image:not(:hover) {
+  animation: zoomOut ease 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomOut {
+  0% {
+    scale: 1.02;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.image:hover {
+  animation: zoomIn ease 0.7s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoomIn {
+  0% {
+    scale: 1;
+  }
+  100% {
+    scale: 1.02;
+  }
+}
+
+.name {
+  font-size: 18px;
+  color: #575757;
+  font-weight: 600;
+  margin: 20px 0;
+}
+
+.year {
+  font-size: 14px;
+  color: #575757;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .project-card-container {
+    padding: 115px calc((100vw - 1280px) / 2 + 30px) 30px;
+  }
+}
