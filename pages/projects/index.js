@@ -1,7 +1,12 @@
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ProjectCard from "@/components/ProjectCard";
+
+const ProjectCard = dynamic(() => import("@/components/ProjectCard"), {
+  loading: () => <p>Loading...</p>,
+  ssr: false,
+});
 
 export default function Page() {
   return (
