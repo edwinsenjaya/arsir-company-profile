@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function ProjectCard() {
-  const projectsData = JSON.parse(localStorage.getItem("projectsData"));
+  const projects = JSON.parse(localStorage.getItem("projects"));
 
   const cards = [];
 
@@ -11,25 +11,25 @@ export default function ProjectCard() {
     return name.replace(" ", "_");
   }
 
-  for (let i = 0; i < projectsData.length; i++) {
+  for (let i = 0; i < projects.length; i++) {
     cards.push(
       <section className={styles["card-container"]} key={i}>
-        <Link href={`/project/${formatProjectName(projectsData[i].name)}`}>
+        <Link href={`/project/${formatProjectName(projects[i].name)}`}>
           <div
             className={styles["image-wrapper"]}
             style={{ width: "360px", height: "270px", objectFit: "cover" }}
           >
             <Image
               className={styles.image}
-              src={`/projects/${formatProjectName(projectsData[i].name)}.jpg`}
+              src={`/projects/${formatProjectName(projects[i].name)}.jpg`}
               width={360}
               height={270}
-              alt={`${formatProjectName(projectsData[i].name)}.jpg`}
+              alt={`${formatProjectName(projects[i].name)}.jpg`}
             />
           </div>
         </Link>
-        <h5 className={styles.name}>{projectsData[i]?.name}</h5>
-        <h5 className={styles.year}>{projectsData[i]?.year}</h5>
+        <h5 className={styles.name}>{projects[i]?.name}</h5>
+        <h5 className={styles.year}>{projects[i]?.year}</h5>
       </section>
     );
   }
