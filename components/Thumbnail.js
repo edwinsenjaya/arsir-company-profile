@@ -5,58 +5,49 @@ import { useState } from "react";
 export default function Thumbnail() {
   const [projectsData, setProjectsData] = useState([
     {
-      name: "OJ House",
+      name: "TC House",
+      type: "Residential",
+      year: "2021",
+      location: "Citraland, Makassar",
+      area: "240 m",
+      scope: "Interior",
+      numberOfImages: 8,
+    },
+    {
+      name: "YB House",
+      type: "Residential",
+      year: "2020",
+      location: "Bone, South Sulawesi",
+      area: "42 m",
+      scope: "Interior",
+      numberOfImages: 5,
+    },
+    {
+      name: "AW House",
+      type: "Residential",
+      year: "2020",
+      location: "Westhoff, Bandung",
+      area: "570 m",
+      scope: "Facade",
+      numberOfImages: 8,
+    },
+    {
+      name: "CC House",
+      type: "Residential",
+      year: "2022",
+      location: "Taman Kopo, Bandung",
+      area: "130 m",
+      scope: "Design & Build",
+      numberOfImages: 4,
+    },
+    {
+      name: "SJ House",
       type: "Residential",
       year: "2023",
-      location: "Daan Mogot, West Jakarta",
+      location: "Kopo, Bandung",
       area: "185 m",
       scope: "Exterior",
-      numberOfImages: 4,
-    },
-    {
-      name: "JH House",
-      type: "Residential",
-      year: "2023",
-      location: "Tanjung Duren, West Jakarta",
-      area: "275 m",
-      scope: "Exterior",
-      numberOfImages: 4,
-    },
-    {
-      name: "DJ House",
-      type: "Residential",
-      year: "2023",
-      location: "Penyaringan, Bali",
-      area: "405 m",
-      scope: "Exterior",
-      numberOfImages: 10,
-    },
-    {
-      name: "SA House",
-      type: "Residential",
-      year: "2023",
-      location: "Alam Sutera, South Tangerang",
-      area: "410 m",
-      scope: "Exterior",
-      numberOfImages: 4,
-    },
-    {
-      name: "JN Resort",
-      type: "Resort",
-      year: "2023",
-      location: "Nusa Penida",
-      area: "800 m",
-      scope: "Exterior & Interior",
-      numberOfImages: 4,
-    },
-    {
-      name: "KS House",
-      type: "Residential",
-      year: "2023",
-      location: "Kavling DKI, West Jakarta",
-      area: "175 m",
-      scope: "Exterior",
-      numberOfImages: 4,
+      numberOfImages: 5,
     },
     {
       name: "SV House",
@@ -68,12 +59,12 @@ export default function Thumbnail() {
       numberOfImages: 5,
     },
     {
-      name: "CC House",
+      name: "SA House",
       type: "Residential",
-      year: "2022",
-      location: "Taman Kopo, Bandung",
-      area: "130 m",
-      scope: "Design & Build",
+      year: "2023",
+      location: "Alam Sutera, South Tangerang",
+      area: "410 m",
+      scope: "Exterior",
       numberOfImages: 4,
     },
     {
@@ -86,42 +77,60 @@ export default function Thumbnail() {
       numberOfImages: 4,
     },
     {
-      name: "TC House",
+      name: "DJ House",
       type: "Residential",
-      year: "2021",
-      location: "Citraland, Makassar",
-      area: "240 m",
-      scope: "Interior",
+      year: "2023",
+      location: "Penyaringan, Bali",
+      area: "405 m",
+      scope: "Exterior",
+      numberOfImages: 10,
+    },
+    {
+      name: "JH House",
+      type: "Residential",
+      year: "2023",
+      location: "Tanjung Duren, West Jakarta",
+      area: "275 m",
+      scope: "Exterior",
+      numberOfImages: 4,
+    },
+    {
+      name: "JN Resort",
+      type: "Resort",
+      year: "2023",
+      location: "Nusa Penida",
+      area: "800 m",
+      scope: "Exterior & Interior",
       numberOfImages: 8,
     },
     {
-      name: "AW House",
+      name: "OJ House",
       type: "Residential",
-      year: "2020",
-      location: "Westhoff, Bandung",
-      area: "570 m",
-      scope: "Facade",
-      numberOfImages: 8,
+      year: "2023",
+      location: "Daan Mogot, West Jakarta",
+      area: "185 m",
+      scope: "Exterior",
+      numberOfImages: 4,
     },
     {
-      name: "YB House",
+      name: "KS House",
       type: "Residential",
-      year: "2020",
-      location: "Bone, South Sulawesi",
-      area: "42 m",
-      scope: "Interior",
-      numberOfImages: 5,
+      year: "2023",
+      location: "Kavling DKI, West Jakarta",
+      area: "175 m",
+      scope: "Exterior",
+      numberOfImages: 4,
+    },
+    {
+      name: "RT House",
+      type: "Town House",
+      year: "2023",
+      location: "Setraduta, Bandung",
+      area: "270 m",
+      scope: "Exterior",
+      numberOfImages: 4,
     },
   ]);
-
-  const randomOrder = [];
-  for (let i = 0; i < projectsData.length; i++) {
-    let randomNumber = Math.floor(Math.random() * projectsData.length);
-    while (randomOrder.includes(randomNumber)) {
-      randomNumber = Math.floor(Math.random() * projectsData.length);
-    }
-    randomOrder.push(randomNumber);
-  }
 
   function formatProjectName(name) {
     return name.replace(" ", "_");
@@ -129,39 +138,36 @@ export default function Thumbnail() {
 
   const thumbnailImages = [];
   const projectList = [];
-  for (let i = 0; i < randomOrder.length; i++) {
+  for (let i = 0; i < projectsData.length; i++) {
     thumbnailImages.push(
       <Link
         key={i}
-        href={`/project/${formatProjectName(
-          projectsData[randomOrder[i]].name
-        )}`}
+        href={`/project/${formatProjectName(projectsData[i].name)}`}
         className={styles["content-wrapper"]}
-        style={i === 12 ? { marginRight: "0" } : { marginRight: "15px" }}
+        style={
+          i === projectsData.length - 1
+            ? { marginRight: "0" }
+            : { marginRight: "15px" }
+        }
       >
         <div className={styles["thumbnail-item"]}>
           <img
             className={styles["thumbnail-image"]}
-            src={`/thumbnail/${formatProjectName(
-              projectsData[randomOrder[i]].name
-            )}.jpg`}
-            alt={`${formatProjectName(projectsData[randomOrder[i]].name)}`}
+            src={`/thumbnail/${formatProjectName(projectsData[i].name)}.jpg`}
+            alt={`${formatProjectName(projectsData[i].name)}`}
           />
+          <div className={styles["thumbnail-text"]}>{projectsData[i].name}</div>
           <div className={styles["thumbnail-text"]}>
-            {projectsData[randomOrder[i]].name}
-          </div>
-          <div className={styles["thumbnail-text"]}>
-            {projectsData[randomOrder[i]].location}
+            {projectsData[i].location}
           </div>
           <div className={styles["thumbnail-cover"]}></div>
         </div>
       </Link>
     );
 
-    projectList.push(projectsData[randomOrder[i]]);
+    projectList.push(projectsData[i]);
   }
   localStorage.setItem("projectsData", JSON.stringify(projectList));
-  localStorage.setItem("projects", JSON.stringify(projectsData));
 
   return (
     <section className={styles["thumbnail-wrapper"]}>
