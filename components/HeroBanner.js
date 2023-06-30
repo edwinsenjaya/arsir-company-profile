@@ -37,7 +37,13 @@ export default function HeroBanner() {
   return (
     <section id="home" className="carousel slide" data-bs-ride="true">
       <div className={styles["cover"]}>
-        <Image src="/gif/arsir.gif" alt="arsir.gif" width={800} height={800} />
+        <Image
+          src="/gif/arsir.gif"
+          alt="arsir.gif"
+          width={800}
+          height={800}
+          className={styles["arsir-gif"]}
+        />
       </div>
       <div className="carousel-indicators">{carouselIndicators}</div>
       <div className="carousel-inner">{carouselItems}</div>

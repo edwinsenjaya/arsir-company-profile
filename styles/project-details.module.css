@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 300px;
+  height: auto;
   background: #f2f2f2;
   padding: 20px 100px;
   font-family: "Nunito Sans";
@@ -21,7 +21,7 @@
   font-family: "Nunito Sans";
   font-weight: 600;
   font-style: italic;
-  color: black;
+  color: #1b1b1d;
 }
 
 .project-info {
@@ -33,6 +33,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .title {
@@ -46,5 +47,12 @@
 @media only screen and (min-width: 1280px) {
   .project-details-container {
     padding: 20px calc(((100vw - 1280px) / 2) + 100px);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .project-info {
+    flex-direction: column;
+    gap: 40px;
   }
 }

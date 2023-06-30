@@ -1,6 +1,7 @@
 .project-card-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   height: auto;
   background: #f2f2f2;
   font-family: "Nunito Sans";
@@ -17,6 +18,9 @@
 .image-wrapper {
   object-fit: cover;
   overflow: hidden;
+  width: 360px;
+  height: 270px;
+  object-fit: cover;
 }
 
 .image:not(:hover) {
@@ -64,5 +68,33 @@
 @media only screen and (min-width: 1280px) {
   .project-card-container {
     padding: 115px calc((100vw - 1280px) / 2 + 30px) 30px;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .project-card-container {
+    padding: 115px 30px 30px;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .card-container {
+    height: auto;
+    width: 87vw;
+    padding: 0;
+  }
+
+  .image-wrapper,
+  .image {
+    width: calc(100vw - 60px);
+    height: auto;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .year {
+    font-size: 12px;
   }
 }

@@ -18,7 +18,7 @@
   gap: 25px;
 }
 
-.image-container {
+.content-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +41,17 @@
 .description {
   font-size: 16px;
   text-align: center;
-  height: 90px;
+  height: auto;
   color: #575757;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 700px) {
+  .what-we-do-container {
+    flex-direction: column;
+  }
+
+  .content-container {
+    width: calc(100vw - 60px);
+  }
 }

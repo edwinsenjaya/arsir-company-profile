@@ -12,6 +12,11 @@
   visibility: visible;
 }
 
+.arsir-gif {
+  width: 800px;
+  height: 800px;
+}
+
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -66,5 +71,12 @@
 
   .fade-cover-left {
     right: 0;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  .arsir-gif {
+    width: calc(100vw - 60px);
+    height: calc(100vw - 60px);
   }
 }

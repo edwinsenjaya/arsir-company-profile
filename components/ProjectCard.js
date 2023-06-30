@@ -125,10 +125,7 @@ export default function ProjectCard() {
     cards.push(
       <section className={styles["card-container"]} key={i}>
         <Link href={`/project/${formatProjectName(projects[i].name)}`}>
-          <div
-            className={styles["image-wrapper"]}
-            style={{ width: "360px", height: "270px", objectFit: "cover" }}
-          >
+          <div className={styles["image-wrapper"]}>
             <Image
               className={styles.image}
               src={`/projects/${formatProjectName(projects[i].name)}.jpg`}

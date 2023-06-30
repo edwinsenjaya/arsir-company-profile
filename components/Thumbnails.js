@@ -183,16 +183,30 @@ export default function Thumbnails() {
   });
 
   const Responsive = {
-    0: {
+    1280: {
       items: 3,
       margin: 25,
       loop: true,
       nav: true,
       autoWidth: true,
       lazyLoad: true,
+      dots: false,
       navText: [
-        `<div style="font-size: 20px; transform: scale(1.25, 2)"><</div>`,
-        `<div style="font-size: 20px; transform: scale(1.25, 2)">></div>`,
+        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;"><</div>`,
+        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;">></div>`,
+      ],
+    },
+    0: {
+      items: 2,
+      margin: 20,
+      loop: true,
+      nav: true,
+      autoWidth: true,
+      lazyLoad: true,
+      dots: false,
+      navText: [
+        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;"><</div>`,
+        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;">></div>`,
       ],
     },
   };

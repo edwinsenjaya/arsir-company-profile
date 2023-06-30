@@ -21,7 +21,7 @@ export default function WhatWeDo() {
   const whatWeDoContent = [];
   for (let key in whatWeDo) {
     whatWeDoContent.push(
-      <section className={styles["image-container"]} key={key}>
+      <section className={styles["content-container"]} key={key}>
         <Image
           src={`/what-we-do-grey/${key}.png`}
           width={150}

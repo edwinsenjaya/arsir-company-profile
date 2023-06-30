@@ -38,6 +38,7 @@ export default function Footer() {
               width={200}
               height={200}
               alt="arsir-architect-grey.png"
+              className={styles.logo}
             />
           </div>
         </section>
