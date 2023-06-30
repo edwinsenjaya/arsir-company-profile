@@ -1,6 +1,4 @@
 import styles from "@/styles/about-us.module.css";
-import Link from "next/link";
-import Image from "next/image";
 
 export default function AboutUs() {
   return (
@@ -17,7 +15,7 @@ export default function AboutUs() {
       </section>
       <section className={styles["paragraph-container"]}>
         <p className={styles.paragraph}>
-          Raymond and Vincent's journey began at Catholic Parahyangan
+          Raymond and Vincent&apos;s journey began at Catholic Parahyangan
           University, where our shared vision and enthusiasm for architecture
           brought us together. Throughout our studies, we honed our skills,
           expanding our knowledge of architectural principles, design theories,
