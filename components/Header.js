@@ -69,7 +69,11 @@ export default function Header() {
             </Link>
           </section>
           <section className={styles["title-3"]}>
-            <Link className={styles.text} href="/about-us">
+            <Link
+              className={styles.text}
+              style={{ display: "block", width: "68px" }}
+              href="/about-us"
+            >
               About Us
             </Link>
           </section>
