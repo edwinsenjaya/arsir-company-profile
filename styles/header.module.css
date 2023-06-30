@@ -50,6 +50,23 @@
   .content-container {
     padding: 0 85px;
   }
+}
+
+@media only screen and (max-width: 1024px) {
+  .content-container {
+    padding: 0 60px;
+  }
+
+  .title-2,
+  .title-3 {
+    margin-left: 80px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .content-container {
+    padding: 0 85px;
+  }
 
   .title-container {
     display: none;
