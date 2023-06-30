@@ -11,6 +11,7 @@ export default function CoreValue() {
           alt="arsir"
           width={700}
           height={184.8}
+          className={styles["logo-image"]}
         />
         <p className={styles.paragraph}>
           Arsir comes from an anagram that represents what the company provides

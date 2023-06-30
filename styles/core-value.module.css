@@ -1,6 +1,6 @@
 .core-value-container {
   display: flex;
-  height: 460px;
+  height: auto;
   padding: 60px 30px 30px;
   font-family: "Nunito Sans";
   background: #f2f2f2;
@@ -9,6 +9,7 @@
 .content-container {
   display: flex;
   flex-direction: column;
+  height: auto;
   justify-content: center;
   align-items: center;
   overflow: hidden;
@@ -16,23 +17,9 @@
   padding: 20px 150px;
 }
 
-.background-image {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  opacity: 15%;
-}
-
-.title,
-.paragraph,
-.contact-us {
-  z-index: 3;
-}
-
-.title {
-  font-weight: 400;
-  font-size: 50px;
-  margin-bottom: 30px;
+.logo-image {
+  width: 700px;
+  height: 184.8px;
 }
 
 .paragraph {
@@ -52,5 +39,29 @@
 @media only screen and (min-width: 1280px) {
   .core-value-container {
     padding: 60px 30px 30px;
+  }
+
+  .content-container {
+    padding: 20px 150px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .logo-image {
+    width: calc(100vw - 60px);
+    height: auto;
+  }
+
+  .content-container {
+    padding: 0;
+  }
+
+  .paragraph {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .contact-us {
+    font-size: 18px;
   }
 }
