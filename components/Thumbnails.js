@@ -153,7 +153,7 @@ export default function Thumbnails() {
         style={
           i === projectsData.length - 1
             ? { marginRight: "0" }
-            : { marginRight: "15px" }
+            : { marginRight: "0" }
         }
       >
         <div className={styles["thumbnail-item"]}>
@@ -184,16 +184,16 @@ export default function Thumbnails() {
 
   const Responsive = {
     1280: {
-      items: 3,
-      margin: 25,
+      items: 4,
+      margin: 20,
       loop: true,
       nav: true,
       autoWidth: true,
       lazyLoad: true,
       dots: false,
       navText: [
-        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;"><</div>`,
-        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;">></div>`,
+        `<div style="font-size: 28px; line-height: 1; margin-top: -4px;"><</div>`,
+        `<div style="font-size: 28px; line-height: 1; margin-top: -4px;">></div>`,
       ],
     },
     0: {
@@ -205,8 +205,8 @@ export default function Thumbnails() {
       lazyLoad: true,
       dots: false,
       navText: [
-        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;"><</div>`,
-        `<div style="font-size: 20px; transform: scale(1.25, 2); width: 60px;">></div>`,
+        `<div style="font-size: 28px; line-height: 1; margin-top: -4px;"><</div>`,
+        `<div style="font-size: 28px; line-height: 1; margin-top: -4px;">></div>`,
       ],
     },
   };
@@ -214,7 +214,11 @@ export default function Thumbnails() {
   return (
     <>
       <section className={styles["thumbnail-wrapper"]}>
-        <OwlCarousel className="owl-carousel owl-theme" responsive={Responsive}>
+        <OwlCarousel
+          className="owl-carousel owl-theme"
+          loop
+          responsive={Responsive}
+        >
           {/* <section className={styles["thumbnail-container"]}> */}
           {thumbnailImages}
           {/* </section> */}
