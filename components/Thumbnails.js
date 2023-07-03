@@ -218,6 +218,8 @@ export default function Thumbnails() {
           className="owl-carousel owl-theme"
           loop
           responsive={Responsive}
+          autoplay={true}
+          autoplayTimeout={3000}
         >
           {/* <section className={styles["thumbnail-container"]}> */}
           {thumbnailImages}
