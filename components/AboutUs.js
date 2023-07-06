@@ -7,6 +7,7 @@ export default function AboutUs() {
       <section className={styles["image-container"]}>
         <Image
           src="/about-us/about-us.jpeg"
+          alt="about-us.jpeg"
           width={465.13}
           height={620}
           className={styles.image}

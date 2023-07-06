@@ -29,6 +29,11 @@
   width: 150px;
 }
 
+.arsir-logo {
+  height: 30px;
+  width: 148.38px;
+}
+
 .title-container {
   display: flex;
   justify-content: flex-end;
@@ -38,6 +43,50 @@
 .title-2,
 .title-3 {
   margin-left: 100px;
+}
+
+.dropdown-button {
+  display: none;
+}
+
+.button {
+  background: transparent;
+  border: none;
+}
+
+.list-button {
+  display: block;
+  height: 30px;
+  width: 30px;
+}
+
+.close-button {
+  display: none;
+  height: 18px;
+  width: 18px;
+  margin-right: 5px;
+}
+
+.dropdown-container {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 70px;
+  z-index: 5;
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 30px;
+  width: 100%;
+  height: 38px;
+  background: #1b1b1d;
+  color: #f2f2f2;
+  border-top: #f2f2f2 0.5px solid;
 }
 
 @media only screen and (min-width: 1280px) {
@@ -63,16 +112,34 @@
   }
 }
 
+@media only screen and (min-width: 701px) {
+  .dropdown-button,
+  .dropdown-container,
+  .dropdown-option {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 700px) {
   .content-container {
-    padding: 0 85px;
+    height: 70px;
+    padding: 0 30px;
+  }
+
+  .logo-container {
+    width: 120px;
+  }
+
+  .arsir-logo {
+    height: 20px;
+    width: 98.92px;
   }
 
   .title-container {
     display: none;
   }
 
-  .logo-container {
-    width: 100%;
+  .dropdown-button {
+    display: flex;
   }
 }
