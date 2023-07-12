@@ -6,6 +6,24 @@ import { useState } from "react";
 export default function ProjectCard() {
   const [projects, setProjects] = useState([
     {
+      name: "NJ House",
+      type: "Residential",
+      year: "2023",
+      location: "Nusa Dua, Bali",
+      area: "225 m",
+      scope: "Exterior",
+      numberOfImages: 1,
+    },
+    {
+      name: "RT House",
+      type: "Town House",
+      year: "2023",
+      location: "Setraduta, Bandung",
+      area: "270 m",
+      scope: "Exterior",
+      numberOfImages: 4,
+    },
+    {
       name: "OJ House",
       type: "Residential",
       year: "2023",
@@ -65,6 +83,16 @@ export default function ProjectCard() {
       year: "2023",
       location: "BSD, South Tangerang",
       area: "420 m",
+      scope: "Exterior",
+      numberOfImages: 5,
+    },
+
+    {
+      name: "SJ House",
+      type: "Residential",
+      year: "2023",
+      location: "Kopo, Bandung",
+      area: "185 m",
       scope: "Exterior",
       numberOfImages: 5,
     },
@@ -128,10 +156,10 @@ export default function ProjectCard() {
           <div className={styles["image-wrapper"]}>
             <Image
               className={styles.image}
-              src={`/projects/${formatProjectName(projects[i].name)}.jpg`}
+              src={`/projects/${formatProjectName(projects[i].name)}.webp`}
               width={360}
               height={270}
-              alt={`${formatProjectName(projects[i].name)}.jpg`}
+              alt={`${formatProjectName(projects[i].name)}.webp`}
             />
           </div>
         </Link>
