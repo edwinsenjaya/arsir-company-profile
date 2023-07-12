@@ -24,8 +24,8 @@ export default function HeroBanner() {
         <div className={styles["carousel-item-container"]}>
           <div className={styles["image-container"]}>
             <img
-              src={"/hero-banner/" + (i + 1) + ".jpg"}
-              alt={"/hero-banner/" + (i + 1) + ".jpg"}
+              src={"/hero-banner/" + (i + 1) + ".webp"}
+              alt={i + 1 + ".webp"}
               className={styles["carousel-image"]}
             />
           </div>

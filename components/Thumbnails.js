@@ -11,24 +11,6 @@ export default function Thumbnails() {
 
   const [projectsData, setProjectsData] = useState([
     {
-      name: "TC House",
-      type: "Residential",
-      year: "2021",
-      location: "Citraland, Makassar",
-      area: "240 m",
-      scope: "Interior",
-      numberOfImages: 8,
-    },
-    {
-      name: "YB House",
-      type: "Residential",
-      year: "2020",
-      location: "Bone, South Sulawesi",
-      area: "42 m",
-      scope: "Interior",
-      numberOfImages: 5,
-    },
-    {
       name: "AW House",
       type: "Residential",
       year: "2020",
@@ -56,22 +38,13 @@ export default function Thumbnails() {
       numberOfImages: 5,
     },
     {
-      name: "SV House",
+      name: "TC House",
       type: "Residential",
-      year: "2023",
-      location: "BSD, South Tangerang",
-      area: "420 m",
-      scope: "Exterior",
-      numberOfImages: 5,
-    },
-    {
-      name: "SA House",
-      type: "Residential",
-      year: "2023",
-      location: "Alam Sutera, South Tangerang",
-      area: "410 m",
-      scope: "Exterior",
-      numberOfImages: 4,
+      year: "2021",
+      location: "Citraland, Makassar",
+      area: "240 m",
+      scope: "Interior",
+      numberOfImages: 8,
     },
     {
       name: "GB Apartment",
@@ -83,6 +56,15 @@ export default function Thumbnails() {
       numberOfImages: 4,
     },
     {
+      name: "YB House",
+      type: "Residential",
+      year: "2020",
+      location: "Bone, South Sulawesi",
+      area: "42 m",
+      scope: "Interior",
+      numberOfImages: 5,
+    },
+    {
       name: "DJ House",
       type: "Residential",
       year: "2023",
@@ -90,6 +72,15 @@ export default function Thumbnails() {
       area: "405 m",
       scope: "Exterior",
       numberOfImages: 10,
+    },
+    {
+      name: "SV House",
+      type: "Residential",
+      year: "2023",
+      location: "BSD, South Tangerang",
+      area: "420 m",
+      scope: "Exterior",
+      numberOfImages: 5,
     },
     {
       name: "JH House",
@@ -110,6 +101,15 @@ export default function Thumbnails() {
       numberOfImages: 8,
     },
     {
+      name: "SA House",
+      type: "Residential",
+      year: "2023",
+      location: "Alam Sutera, South Tangerang",
+      area: "410 m",
+      scope: "Exterior",
+      numberOfImages: 4,
+    },
+    {
       name: "OJ House",
       type: "Residential",
       year: "2023",
@@ -117,6 +117,15 @@ export default function Thumbnails() {
       area: "185 m",
       scope: "Exterior",
       numberOfImages: 4,
+    },
+    {
+      name: "NJ House",
+      type: "Residential",
+      year: "2023",
+      location: "Nusa Dua, Bali",
+      area: "225 m",
+      scope: "Exterior",
+      numberOfImages: 1,
     },
     {
       name: "KS House",
@@ -159,8 +168,8 @@ export default function Thumbnails() {
         <div className={styles["thumbnail-item"]}>
           <img
             className={styles["thumbnail-image"]}
-            src={`/thumbnail/${formatProjectName(projectsData[i].name)}.jpg`}
-            alt={`${formatProjectName(projectsData[i].name)}`}
+            src={`/thumbnail/${formatProjectName(projectsData[i].name)}.webp`}
+            alt={`${formatProjectName(projectsData[i].name)}.webp`}
           />
           <div className={styles["thumbnail-text"]}>{projectsData[i].name}</div>
           <div className={styles["thumbnail-text"]}>
