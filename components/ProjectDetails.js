@@ -1,5 +1,6 @@
 import styles from "@/styles/project-details.module.css";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function ProjectDetails() {
@@ -48,6 +49,13 @@ export default function ProjectDetails() {
           <h5 className={styles.info}>{project?.scope}</h5>
         </section>
       </section>
+      <Image
+        src="/project/DJ_House.webp"
+        alt="DJ_House.webp"
+        height={1761.3}
+        width={1000}
+        className={styles["project-images"]}
+      />
       <Link
         href={`/project/${formatProjectName(projectsData[indexRight]?.name)}`}
         className={styles["project-link"]}

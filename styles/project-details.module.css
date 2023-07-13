@@ -17,14 +17,6 @@
   text-align: center;
 }
 
-.project-link {
-  font-size: 16px;
-  font-family: "Nunito Sans";
-  font-weight: 600;
-  font-style: italic;
-  color: #1b1b1d;
-}
-
 .project-info {
   display: flex;
   gap: 90px;
@@ -43,6 +35,19 @@
 
 .info {
   font-weight: 400;
+}
+
+.project-images {
+  width: 85vw;
+  height: auto;
+}
+
+.project-link {
+  font-size: 16px;
+  font-family: "Nunito Sans";
+  font-weight: 600;
+  font-style: italic;
+  color: #1b1b1d;
 }
 
 @media only screen and (min-width: 1280px) {
