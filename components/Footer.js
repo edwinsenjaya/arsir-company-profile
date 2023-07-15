@@ -27,11 +27,7 @@ export default function Footer() {
           <Link href="/about-us" className={styles.text}>
             About Us
           </Link>
-          <Link
-            href="https://wa.me/6281389007566"
-            target="_blank"
-            className={styles.text}
-          >
+          <Link href="/contact-us" className={styles.text}>
             Contact Us
           </Link>
         </section>
