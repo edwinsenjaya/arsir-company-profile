@@ -30,12 +30,6 @@
   color: #575757;
 }
 
-.contact-us {
-  font-weight: 500;
-  color: #1b1b1d;
-  font-size: 20px;
-}
-
 @media only screen and (min-width: 1280px) {
   .core-value-container {
     padding: 60px 30px 30px;
@@ -59,9 +53,5 @@
   .paragraph {
     font-size: 16px;
     margin-bottom: 30px;
-  }
-
-  .contact-us {
-    font-size: 18px;
   }
 }
