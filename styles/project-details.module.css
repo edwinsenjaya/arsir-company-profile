@@ -4,7 +4,7 @@
   align-items: center;
   height: auto;
   background: #f2f2f2;
-  padding: 20px 100px;
+  padding: 105px 100px 60px;
   font-family: "Nunito Sans";
   gap: 32px;
 }
@@ -52,11 +52,25 @@
 
 @media only screen and (min-width: 1280px) {
   .project-details-container {
-    padding: 20px calc(((100vw - 1280px) / 2) + 100px);
+    padding: 105px calc(((100vw - 1280px) / 2) + 100px) 60px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .project-details-container {
+    padding: 105px 60px 60px;
+  }
+
+  .project-info {
+    gap: 35px;
   }
 }
 
 @media only screen and (max-width: 700px) {
+  .project-details-container {
+    padding: 90px 30px 30px;
+  }
+
   .project-info {
     flex-direction: column;
     gap: 40px;

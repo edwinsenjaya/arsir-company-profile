@@ -100,6 +100,15 @@ export default function Header() {
               About Us
             </Link>
           </section>
+          <section className={styles["title-4"]}>
+            <Link
+              className={styles.text}
+              style={{ display: "block", width: "80px" }}
+              href="/contact-us"
+            >
+              Contact Us
+            </Link>
+          </section>
         </section>
         <section className={styles["dropdown-button"]}>
           <button className={styles.button} onClick={openDropDown}>
@@ -136,6 +145,11 @@ export default function Header() {
         <section className={styles["dropdown-option"]}>
           <Link className={styles.text} href="/about-us">
             About Us
+          </Link>
+        </section>
+        <section className={styles["dropdown-option"]}>
+          <Link className={styles.text} href="/contact-us">
+            Contact Us
           </Link>
         </section>
       </section>
