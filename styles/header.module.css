@@ -41,7 +41,8 @@
 }
 
 .title-2,
-.title-3 {
+.title-3,
+.title-4 {
   margin-left: 100px;
 }
 
@@ -107,8 +108,9 @@
   }
 
   .title-2,
-  .title-3 {
-    margin-left: 80px;
+  .title-3,
+  .title-4 {
+    margin-left: 60px;
   }
 }
 

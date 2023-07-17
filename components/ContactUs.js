@@ -1,5 +1,6 @@
 import styles from "@/styles/contact-us.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function ContactUs() {
   function sendEmail() {
@@ -110,7 +111,15 @@ export default function ContactUs() {
           </div>
         </form>
       </section>
-      <section className={styles["image-container"]}>Image</section>
+      <section className={styles["image-container"]}>
+        <Image
+          src="/contact-us/contact-us.webp"
+          alt="contact-us.webp"
+          width={300}
+          height={400}
+          className={styles.image}
+        />
+      </section>
     </section>
   );
 }

@@ -50,8 +50,8 @@ export default function ProjectDetails() {
         </section>
       </section>
       <Image
-        src="/project/DJ_House.webp"
-        alt="DJ_House.webp"
+        src="/project/DJ_House.png"
+        alt="DJ_House.png"
         height={1761.3}
         width={1000}
         className={styles["project-images"]}
