@@ -16,7 +16,7 @@ export default function ProjectDetails() {
   });
 
   function formatProjectName(name) {
-    return name.replace(" ", "_");
+    return name?.replace(" ", "_");
   }
 
   const bootstrapCarousel = document.getElementById("carouselProjectBanner");
@@ -50,8 +50,8 @@ export default function ProjectDetails() {
         </section>
       </section>
       <Image
-        src="/project/DJ_House.png"
-        alt="DJ_House.png"
+        src={`/project/${formatProjectName(project?.name)}.png`}
+        alt={`${formatProjectName(project?.name)}.png`}
         height={1761.3}
         width={1000}
         className={styles["project-images"]}
