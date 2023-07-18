@@ -31,7 +31,7 @@ export default function Thumbnails() {
     {
       name: "SJ House",
       type: "Residential",
-      year: "2023",
+      year: "2022",
       location: "Kopo, Bandung",
       area: "185 m",
       scope: "Exterior",
