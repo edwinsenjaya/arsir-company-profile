@@ -1,7 +1,24 @@
 import styles from "@/styles/hero-banner.module.css";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function HeroBanner() {
+  let unmountCounter = 0;
+
+  useEffect(() => {
+    if (window.sessionStorage.getItem("newSession") === "false") {
+      document.querySelector("#cover").style.display = "none";
+    }
+    return () => {
+      unmountCounter++;
+      if (unmountCounter === 2) {
+        if (window.sessionStorage.getItem("newSession") === null) {
+          window.sessionStorage.setItem("newSession", "false");
+        }
+      }
+    };
+  }, []);
+
   const carouselIndicators = [];
   const carouselItems = [];
   for (let i = 0; i < 7; i++) {
@@ -36,7 +53,7 @@ export default function HeroBanner() {
 
   return (
     <section id="home" className="carousel slide" data-bs-ride="true">
-      <div className={styles["cover"]}>
+      <div id="cover" className={styles["cover"]}>
         <Image
           src="/gif/arsir.gif"
           alt="arsir.gif"
