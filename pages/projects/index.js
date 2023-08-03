@@ -4,7 +4,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const ProjectCard = dynamic(() => import("@/components/ProjectCard"), {
-  loading: () => <p>Loading...</p>,
   ssr: false,
 });
 
@@ -12,7 +11,7 @@ export default function Page() {
   return (
     <>
       <Head>
-        <title>Arsir Architect</title>
+        <title>Arsir Architect - Architecture and Interior Design</title>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

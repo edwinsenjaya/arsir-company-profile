@@ -2,6 +2,7 @@ import styles from "@/styles/project-details.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { DJ_House } from "@/public/blur/blur";
 
 export default function ProjectDetails() {
   const projectsData = JSON.parse(localStorage.getItem("projectsData"));
@@ -55,6 +56,8 @@ export default function ProjectDetails() {
         height={1761.3}
         width={1000}
         className={styles["project-images"]}
+        placeholder="blur"
+        blurDataURL="data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAb/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
       />
       <Link
         href={`/project/${formatProjectName(projectsData[indexRight]?.name)}`}
