@@ -3,21 +3,14 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 export default function HeroBanner() {
-  let unmountCounter = 0;
-
   useEffect(() => {
-    console.log("MOUNT");
     if (window.sessionStorage.getItem("newSession") === "false") {
       document.querySelector("#cover").style.display = "none";
     }
     return () => {
-      unmountCounter++;
-      if (unmountCounter === 2) {
-        if (window.sessionStorage.getItem("newSession") === null) {
-          window.sessionStorage.setItem("newSession", "false");
-        }
+      if (window.sessionStorage.getItem("newSession") === null) {
+        window.sessionStorage.setItem("newSession", "false");
       }
-      console.log(unmountCounter, "UNMOUNT");
     };
   }, []);
 
