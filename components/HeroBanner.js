@@ -6,6 +6,7 @@ export default function HeroBanner() {
   let unmountCounter = 0;
 
   useEffect(() => {
+    console.log("MOUNT");
     if (window.sessionStorage.getItem("newSession") === "false") {
       document.querySelector("#cover").style.display = "none";
     }
@@ -16,6 +17,7 @@ export default function HeroBanner() {
           window.sessionStorage.setItem("newSession", "false");
         }
       }
+      console.log(unmountCounter, "UNMOUNT");
     };
   }, []);
 
