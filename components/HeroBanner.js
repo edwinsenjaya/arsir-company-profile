@@ -4,14 +4,11 @@ import { useEffect } from "react";
 
 export default function HeroBanner() {
   useEffect(() => {
-    if (window.sessionStorage.getItem("newSession") === "false") {
+    if (window.sessionStorage.getItem("newSession") === null) {
+      window.sessionStorage.setItem("newSession", "false");
+    } else {
       document.querySelector("#cover").style.display = "none";
     }
-    return () => {
-      if (window.sessionStorage.getItem("newSession") === null) {
-        window.sessionStorage.setItem("newSession", "false");
-      }
-    };
   }, []);
 
   const carouselIndicators = [];
