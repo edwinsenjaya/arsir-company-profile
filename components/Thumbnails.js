@@ -105,7 +105,7 @@ export default function Thumbnails() {
       type: "Residential",
       year: "2023",
       location: "Alam Sutera, South Tangerang",
-      area: "410 m",
+      area: "1030 m",
       scope: "Exterior",
       numberOfImages: 4,
     },
