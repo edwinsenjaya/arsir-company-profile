@@ -15,7 +15,7 @@ export default function CoreValue() {
         />
         <p className={styles.paragraph}>
           Arsir comes from an anagram that represents what the company provides
-          to each Client. The firm provides consultancy in ARchitectural
+          to each Client. The firm provides consultancy in Architectural
           designs, Interior Design, and Real estate advisory. Arsir Architect
           believes that architecture is not all about aesthetics, but
           architecture should be profitable and cost effective.
