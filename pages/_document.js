@@ -8,7 +8,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,500;0,600;1,500&display=swap"
         />
-        <link rel="icon" href="/images/arsir-architect-white-1.png" />
+        <link rel="icon" href="/images/logo-icon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
