@@ -1,5 +1,4 @@
 import styles from "@/styles/core-value.module.css";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function CoreValue() {
@@ -16,9 +15,10 @@ export default function CoreValue() {
         <p className={styles.paragraph}>
           Arsir comes from an anagram that represents what the company provides
           to each Client. The firm provides consultancy in Architectural
-          designs, Interior Design, and Real estate advisory. Arsir Architect
-          believes that architecture is not all about aesthetics, but
-          architecture should be profitable and cost effective.
+          designs, Interior Design, and Real estate advisory. Arsir also
+          embodies our purpose to draw and transform the vision into reality.
+          Our canvas is space - embracing simplicity, minimalism, and modern
+          aesthetics.
         </p>
       </div>
     </section>
