@@ -17,13 +17,13 @@ export default function ProjectDetails() {
     return el.name === projectName?.replace("_", " ");
   });
 
+  function formatProjectName(name) {
+    return name?.replace(" ", "_");
+  }
+
   if (projectName !== previousProject && previousProject !== null) {
     localStorage.setItem("projectDetailName", router.query.name);
     router.reload();
-  }
-
-  function formatProjectName(name) {
-    return name?.replace(" ", "_");
   }
 
   if (projectName === previousProject) {
@@ -31,6 +31,8 @@ export default function ProjectDetails() {
       "projectDetailName",
       formatProjectName(projectsData[indexRight]?.name)
     );
+  } else if (previousProject === null) {
+    localStorage.setItem("projectDetailName", router.query.name);
   }
 
   return (
