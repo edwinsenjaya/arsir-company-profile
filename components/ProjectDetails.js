@@ -26,7 +26,7 @@ export default function ProjectDetails() {
     router.reload();
   }
 
-  if (previousProject === null) {
+  if (projectName === previousProject || previousProject === null) {
     localStorage.setItem("projectDetailName", router.query.name);
   }
 
