@@ -14,6 +14,8 @@ export default function ProjectDetails() {
     router.reload();
   }
 
+  localStorage.setItem("projectDetailName", router.query.name);
+
   const projectsData = JSON.parse(localStorage.getItem("projectsData"));
   let indexRight;
   const project = projectsData?.find((el, i) => {
