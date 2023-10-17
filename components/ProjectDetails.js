@@ -8,10 +8,12 @@ export default function ProjectDetails() {
 
   const router = useRouter();
   let projectName = router.query.name;
+  console.log(projectName, "projectName");
+  console.log(previousProject, "previousProject");
 
-  if (projectName !== previousProject && previousProject !== null) {
-    router.reload();
-  }
+  // if (projectName !== previousProject && previousProject !== null) {
+  //   router.reload();
+  // }
 
   localStorage.setItem("projectDetailName", router.query.name);
 
