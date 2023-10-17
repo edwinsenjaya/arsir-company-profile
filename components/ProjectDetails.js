@@ -19,11 +19,6 @@ export default function ProjectDetails() {
     return name?.replace(" ", "_");
   }
 
-  const bootstrapCarousel = document.getElementById("carouselProjectBanner");
-  function scrollCarousel() {
-    bootstrapCarousel?.carousel(0);
-  }
-
   return (
     <section className={styles["project-details-container"]}>
       <h4 className={styles["project-name"]}>{project?.name}</h4>
@@ -61,7 +56,6 @@ export default function ProjectDetails() {
       <Link
         href={`/project/${formatProjectName(projectsData[indexRight]?.name)}`}
         className={styles["project-link"]}
-        onClick={scrollCarousel}
       >
         Next Project &#x2192;
       </Link>
