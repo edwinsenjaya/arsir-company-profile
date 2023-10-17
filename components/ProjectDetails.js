@@ -4,12 +4,19 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function ProjectDetails() {
-  const projectsData = JSON.parse(localStorage.getItem("projectsData"));
-  let indexRight;
+  const previousProject = localStorage.getItem("projectDetailName");
 
   const router = useRouter();
   let projectName = router.query.name;
 
+  if (projectName !== previousProject && previousProject !== null) {
+    router.reload();
+  }
+
+  localStorage.setItem("projectDetailName", router.query.name);
+
+  const projectsData = JSON.parse(localStorage.getItem("projectsData"));
+  let indexRight;
   const project = projectsData?.find((el, i) => {
     i + 1 === projectsData.length ? (indexRight = 0) : (indexRight = i + 1);
     return el.name === projectName?.replace("_", " ");
