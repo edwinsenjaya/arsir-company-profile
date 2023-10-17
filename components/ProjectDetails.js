@@ -21,17 +21,13 @@ export default function ProjectDetails() {
     return name?.replace(" ", "_");
   }
 
-  console.log(localStorage.getItem("projectDetailName"), "local storage");
-  console.log(projectName, "projectName");
   console.log(previousProject, "previousProjecet");
+  console.log(projectName, "projectName");
+  console.log(localStorage.getItem("projectDetailName"), "local storage");
+  localStorage.setItem("projectDetailName", projectName);
 
   if (projectName !== previousProject && previousProject !== null) {
-    localStorage.setItem("projectDetailName", router.query.name);
     router.reload();
-  }
-
-  if (projectName === previousProject || previousProject === null) {
-    localStorage.setItem("projectDetailName", router.query.name);
   }
 
   return (
