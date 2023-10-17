@@ -4,8 +4,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function ProjectDetails() {
-  const previousProject = localStorage.getItem("projectDetailName");
-
   const router = useRouter();
   let projectName = router.query.name;
 
@@ -24,7 +22,7 @@ export default function ProjectDetails() {
   localStorage.setItem("projectDetailName", projectName);
 
   if (
-    projectName &&
+    projectName !== undefined &&
     projectName !== previousProject &&
     previousProject !== null
   ) {
