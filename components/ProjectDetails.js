@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function ProjectDetails() {
-  const previousProject = localStorage.getItem("projectDetailName");
   const router = useRouter();
   let projectName = router.query.name;
 
@@ -18,16 +17,6 @@ export default function ProjectDetails() {
 
   function formatProjectName(name) {
     return name?.replace(" ", "_");
-  }
-
-  localStorage.setItem("projectDetailName", projectName);
-
-  if (
-    projectName !== undefined &&
-    projectName !== previousProject &&
-    previousProject !== null
-  ) {
-    router.reload();
   }
 
   return (
