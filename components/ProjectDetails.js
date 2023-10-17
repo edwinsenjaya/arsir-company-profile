@@ -9,22 +9,28 @@ export default function ProjectDetails() {
   const router = useRouter();
   let projectName = router.query.name;
 
-  if (projectName !== previousProject && previousProject !== null) {
-    localStorage.setItem("projectDetailName", router.query.name);
-    router.reload();
-  }
-
-  localStorage.setItem("projectDetailName", router.query.name);
-
   const projectsData = JSON.parse(localStorage.getItem("projectsData"));
   let indexRight;
+
   const project = projectsData?.find((el, i) => {
     i + 1 === projectsData.length ? (indexRight = 0) : (indexRight = i + 1);
     return el.name === projectName?.replace("_", " ");
   });
 
+  if (projectName !== previousProject && previousProject !== null) {
+    localStorage.setItem("projectDetailName", router.query.name);
+    router.reload();
+  }
+
   function formatProjectName(name) {
     return name?.replace(" ", "_");
+  }
+
+  if (projectName === previousProject) {
+    localStorage.setItem(
+      "projectDetailName",
+      formatProjectName(projectsData[indexRight]?.name)
+    );
   }
 
   return (
