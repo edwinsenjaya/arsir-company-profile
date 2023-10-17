@@ -21,12 +21,13 @@ export default function ProjectDetails() {
     return name?.replace(" ", "_");
   }
 
-  console.log(previousProject, "previousProjecet");
-  console.log(projectName, "projectName");
-  console.log(localStorage.getItem("projectDetailName"), "local storage");
   localStorage.setItem("projectDetailName", projectName);
 
-  if (projectName !== previousProject && previousProject !== null) {
+  if (
+    projectName &&
+    projectName !== previousProject &&
+    previousProject !== null
+  ) {
     router.reload();
   }
 
