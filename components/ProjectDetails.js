@@ -21,7 +21,7 @@ export default function ProjectDetails() {
     return name?.replace(" ", "_");
   }
 
-  console.log(localStorage.getItem("projectsData"), "local storage");
+  console.log(localStorage.getItem("projectDetailName"), "local storage");
   console.log(projectName, "projectName");
   console.log(previousProject, "previousProjecet");
 
