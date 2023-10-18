@@ -45,6 +45,7 @@ export default function ProjectDetails() {
         </section>
       </section>
       <Image
+        key={project?.name}
         src={`/project/${formatProjectName(project?.name)}.png`}
         alt={`${formatProjectName(project?.name)}.png`}
         height={1761.3}
