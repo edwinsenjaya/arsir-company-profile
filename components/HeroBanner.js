@@ -1,5 +1,4 @@
 import styles from "@/styles/hero-banner.module.css";
-import Image from "next/image";
 import { useEffect } from "react";
 
 export default function HeroBanner() {
@@ -46,13 +45,16 @@ export default function HeroBanner() {
   return (
     <section id="home" className="carousel slide" data-bs-ride="true">
       <div id="cover" className={styles["cover"]}>
-        <Image
-          src="/gif/arsir.gif"
-          alt="arsir.gif"
-          width={800}
-          height={800}
+        <video
+          width="800"
+          height="800"
+          autoPlay
+          muted
           className={styles["arsir-gif"]}
-        />
+        >
+          <source src="/gif/arsir.webm" type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div className="carousel-indicators">{carouselIndicators}</div>
       <div className="carousel-inner">{carouselItems}</div>
