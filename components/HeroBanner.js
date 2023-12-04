@@ -2,16 +2,19 @@ import styles from "@/styles/hero-banner.module.css";
 import { useEffect } from "react";
 
 export default function HeroBanner() {
+  const carouselIndicators = [];
+  const carouselItems = [];
+  let screenWidth = 0;
+
   useEffect(() => {
     if (window.sessionStorage.getItem("newSession") === null) {
       window.sessionStorage.setItem("newSession", "false");
     } else {
       document.querySelector("#cover").style.display = "none";
     }
+    screenWidth = window.outerWidth;
   }, []);
 
-  const carouselIndicators = [];
-  const carouselItems = [];
   for (let i = 0; i < 8; i++) {
     carouselIndicators.push(
       <button
@@ -23,23 +26,41 @@ export default function HeroBanner() {
         aria-current={i === 0 ? "true" : ""}
       ></button>
     );
-
-    carouselItems.push(
-      <div
-        key={i}
-        className={i === 0 ? "carousel-item active" : "carousel-item"}
-      >
-        <div className={styles["carousel-item-container"]}>
-          <div className={styles["image-container"]}>
-            <img
-              src={"/hero-banner/" + (i + 1) + ".webp"}
-              alt={i + 1 + ".webp"}
-              className={styles["carousel-image"]}
-            />
+    if (screenWidth > 600) {
+      carouselItems.push(
+        <div
+          key={i}
+          className={i === 0 ? "carousel-item active" : "carousel-item"}
+        >
+          <div className={styles["carousel-item-container"]}>
+            <div className={styles["image-container"]}>
+              <img
+                src={"/hero-banner/" + (i + 1) + ".webp"}
+                alt={i + 1 + ".webp"}
+                className={styles["carousel-image"]}
+              />
+            </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    } else {
+      carouselItems.push(
+        <div
+          key={i}
+          className={i === 0 ? "carousel-item active" : "carousel-item"}
+        >
+          <div className={styles["carousel-item-container"]}>
+            <div className={styles["image-container"]}>
+              <img
+                src={"/hero-banner/mobile-" + (i + 1) + ".webp"}
+                alt={i + 1 + ".webp"}
+                className={styles["carousel-image"]}
+              />
+            </div>
+          </div>
+        </div>
+      );
+    }
   }
 
   return (
