@@ -17,7 +17,7 @@ export default function HeroBanner() {
   }, []);
 
   if (screenWidth <= 600) {
-    numberOfImages = 6;
+    numberOfImages = 5;
   } else {
     numberOfImages = 7;
   }

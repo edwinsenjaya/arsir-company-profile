@@ -75,4 +75,12 @@
     flex-direction: column;
     gap: 40px;
   }
+
+  .project-name {
+    font-size: 32px;
+  }
+
+  .project-link {
+    font-size: 13px;
+  }
 }

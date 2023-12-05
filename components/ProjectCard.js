@@ -86,7 +86,6 @@ export default function ProjectCard() {
       scope: "Exterior",
       numberOfImages: 5,
     },
-
     {
       name: "SJ House",
       type: "Residential",

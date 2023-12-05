@@ -78,6 +78,10 @@
   .thumbnail-cover {
     opacity: 1;
   }
+
+  .thumbnail-text {
+    font-size: 17px;
+  }
 }
 
 @media only screen and (max-width: 400px) {
