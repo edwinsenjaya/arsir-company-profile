@@ -82,8 +82,8 @@
   }
 
   .logo {
-    width: 30vw;
-    height: 30vw;
+    width: 25vw;
+    height: 25vw;
   }
 
   .links-container,
@@ -92,6 +92,6 @@
   }
 
   .text {
-    font-size: 9px;
+    font-size: 8px;
   }
 }

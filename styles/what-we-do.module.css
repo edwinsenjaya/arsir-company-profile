@@ -54,4 +54,16 @@
   .content-container {
     width: calc(100vw - 60px);
   }
+
+  .what-we-do-title {
+    font-size: 21px;
+  }
+
+  .title {
+    font-size: 19px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
 }
