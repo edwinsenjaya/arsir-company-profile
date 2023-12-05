@@ -14,16 +14,23 @@ export default function Header() {
     const closeButton = document.querySelector("#close-button");
 
     if (router.pathname === "/") {
+      let displayThreshold = 0;
       header.addEventListener("mouseover", () => {
         header.style.background = "#1b1b1d";
       });
       header.addEventListener("mouseleave", () => {
         header.style.background = transparent;
       });
+      if (window.outerWidth > 600) {
+        displayThreshold = window.outerHeight;
+      } else {
+        displayThreshold = window.outerWidth;
+      }
+      console.log(displayThreshold);
       window.onscroll = function () {
         let currentScrollPos = window.scrollY;
         if (
-          currentScrollPos > window.innerHeight ||
+          currentScrollPos > displayThreshold ||
           closeButton.style.display === "block"
         ) {
           header.style.background = "#1b1b1d";
