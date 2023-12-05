@@ -1,21 +1,28 @@
 import styles from "@/styles/hero-banner.module.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function HeroBanner() {
   const carouselIndicators = [];
   const carouselItems = [];
-  let screenWidth = 0;
+  let numberOfImages = 0;
 
+  const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
     if (window.sessionStorage.getItem("newSession") === null) {
       window.sessionStorage.setItem("newSession", "false");
     } else {
       document.querySelector("#cover").style.display = "none";
     }
-    screenWidth = window.outerWidth;
+    setScreenWidth(window.outerWidth);
   }, []);
 
-  for (let i = 0; i < 8; i++) {
+  if (screenWidth <= 600) {
+    numberOfImages = 6;
+  } else {
+    numberOfImages = 7;
+  }
+
+  for (let i = 0; i < numberOfImages; i++) {
     carouselIndicators.push(
       <button
         key={i}
@@ -26,24 +33,8 @@ export default function HeroBanner() {
         aria-current={i === 0 ? "true" : ""}
       ></button>
     );
-    if (screenWidth > 600) {
-      carouselItems.push(
-        <div
-          key={i}
-          className={i === 0 ? "carousel-item active" : "carousel-item"}
-        >
-          <div className={styles["carousel-item-container"]}>
-            <div className={styles["image-container"]}>
-              <img
-                src={"/hero-banner/" + (i + 1) + ".webp"}
-                alt={i + 1 + ".webp"}
-                className={styles["carousel-image"]}
-              />
-            </div>
-          </div>
-        </div>
-      );
-    } else {
+
+    if (screenWidth <= 600) {
       carouselItems.push(
         <div
           key={i}
@@ -60,9 +51,25 @@ export default function HeroBanner() {
           </div>
         </div>
       );
+    } else {
+      carouselItems.push(
+        <div
+          key={i}
+          className={i === 0 ? "carousel-item active" : "carousel-item"}
+        >
+          <div className={styles["carousel-item-container"]}>
+            <div className={styles["image-container"]}>
+              <img
+                src={"/hero-banner/" + (i + 1) + ".webp"}
+                alt={i + 1 + ".webp"}
+                className={styles["carousel-image"]}
+              />
+            </div>
+          </div>
+        </div>
+      );
     }
   }
-
   return (
     <section id="home" className="carousel slide" data-bs-ride="true">
       <div id="cover" className={styles["cover"]}>
