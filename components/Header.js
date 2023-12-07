@@ -26,7 +26,7 @@ export default function Header() {
       } else {
         displayThreshold = window.outerWidth;
       }
-      console.log(displayThreshold);
+
       window.onscroll = function () {
         let currentScrollPos = window.scrollY;
         if (
