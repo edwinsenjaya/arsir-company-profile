@@ -1,13 +1,17 @@
 import styles from "@/styles/thumbnails.module.css";
 import dynamic from "next/dynamic";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Thumbnails() {
   let $ = require("jquery");
-  if (typeof window !== "undefined") {
+
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
     window.$ = window.jQuery = require("jquery");
-  }
+    setScreenWidth(window.outerWidth);
+  }, []);
 
   const [projectsData, setProjectsData] = useState([
     {
@@ -45,6 +49,7 @@ export default function Thumbnails() {
       area: "240 m",
       scope: "Interior",
       numberOfImages: 8,
+      hideOnMobile: true,
     },
     {
       name: "GB Apartment",
@@ -54,6 +59,7 @@ export default function Thumbnails() {
       area: "21.5 ~ 45.6 m",
       scope: "Interior",
       numberOfImages: 4,
+      hideOnMobile: true,
     },
     {
       name: "YB House",
@@ -63,6 +69,7 @@ export default function Thumbnails() {
       area: "42 m",
       scope: "Interior",
       numberOfImages: 5,
+      hideOnMobile: true,
     },
     {
       name: "DJ House",
@@ -154,31 +161,35 @@ export default function Thumbnails() {
   const thumbnailImages = [];
   const projectList = [];
   for (let i = 0; i < projectsData.length; i++) {
-    thumbnailImages.push(
-      <Link
-        key={i}
-        href={`/project/${formatProjectName(projectsData[i].name)}`}
-        className={styles["content-wrapper"]}
-        style={
-          i === projectsData.length - 1
-            ? { marginRight: "0" }
-            : { marginRight: "0" }
-        }
-      >
-        <div className={styles["thumbnail-item"]}>
-          <img
-            className={styles["thumbnail-image"]}
-            src={`/thumbnail/${formatProjectName(projectsData[i].name)}.webp`}
-            alt={`${formatProjectName(projectsData[i].name)}.webp`}
-          />
-          <div className={styles["thumbnail-text"]}>{projectsData[i].name}</div>
-          <div className={styles["thumbnail-text"]}>
-            {projectsData[i].location}
+    if (!projectsData[i].hideOnMobile || screenWidth > 600) {
+      thumbnailImages.push(
+        <Link
+          key={i}
+          href={`/project/${formatProjectName(projectsData[i].name)}`}
+          className={styles["content-wrapper"]}
+          style={
+            i === projectsData.length - 1
+              ? { marginRight: "0" }
+              : { marginRight: "0" }
+          }
+        >
+          <div className={styles["thumbnail-item"]}>
+            <img
+              className={styles["thumbnail-image"]}
+              src={`/thumbnail/${formatProjectName(projectsData[i].name)}.webp`}
+              alt={`${formatProjectName(projectsData[i].name)}.webp`}
+            />
+            <div className={styles["thumbnail-text"]}>
+              {projectsData[i].name}
+            </div>
+            <div className={styles["thumbnail-text"]}>
+              {projectsData[i].location}
+            </div>
+            <div className={styles["thumbnail-cover"]}></div>
           </div>
-          <div className={styles["thumbnail-cover"]}></div>
-        </div>
-      </Link>
-    );
+        </Link>
+      );
+    }
 
     projectList.push(projectsData[i]);
   }
@@ -230,9 +241,7 @@ export default function Thumbnails() {
           autoplay={true}
           autoplayTimeout={3000}
         >
-          {/* <section className={styles["thumbnail-container"]}> */}
           {thumbnailImages}
-          {/* </section> */}
         </OwlCarousel>
       </section>
     </>

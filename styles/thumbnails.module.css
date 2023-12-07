@@ -81,6 +81,11 @@
 
   .thumbnail-text {
     font-size: 17px;
+    bottom: 58px;
+  }
+
+  .thumbnail-cover {
+    bottom: 200px;
   }
 }
 
