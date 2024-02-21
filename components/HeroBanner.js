@@ -8,12 +8,21 @@ export default function HeroBanner() {
 
   const [screenWidth, setScreenWidth] = useState(0);
   useEffect(() => {
+    const gifCover = document.getElementById("cover");
     if (window.sessionStorage.getItem("newSession") === null) {
       window.sessionStorage.setItem("newSession", "false");
     } else {
-      document.querySelector("#cover").style.display = "none";
+      gifCover.style.display = "none";
     }
     setScreenWidth(window.outerWidth);
+
+    const arsirGif = document.getElementById("arsir-gif");
+
+    arsirGif.addEventListener("ended", () => {
+      gifCover.style.visibility = "hidden";
+      gifCover.style.opacity = "0";
+      gifCover.style.transition = "visibility 0.3s, opacity 0.3s linear";
+    });
   }, []);
 
   if (screenWidth <= 600) {
@@ -78,6 +87,7 @@ export default function HeroBanner() {
           height="800"
           autoPlay
           muted
+          id="arsir-gif"
           className={styles["arsir-gif"]}
         >
           <source src="/gif/arsir.webm" type="video/webm" />
