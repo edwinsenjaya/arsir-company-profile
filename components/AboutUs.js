@@ -33,15 +33,6 @@ export default function AboutUs() {
             endeavours.
           </p>
         </section>
-        <section className={styles["paragraph-container"]}>
-          <p className={styles.paragraph}>
-            Throughout our architectural journey, we have had the privilege of
-            welcoming another brilliant mind into our team. Valencia is a
-            talented female architect who brings her unique perspective,
-            creativity, and keen eye for aesthetics that have enriched our
-            collective approach to design.
-          </p>
-        </section>
         <section
           className={styles["paragraph-container"]}
           style={{ paddingBottom: "30px" }}
