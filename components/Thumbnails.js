@@ -15,6 +15,24 @@ export default function Thumbnails() {
 
   const [projectsData, setProjectsData] = useState([
     {
+      name: "AT House",
+      type: "Residential",
+      year: "2024",
+      location: "Subang, West Java",
+      area: "250 m",
+      scope: "Exterior & Interior",
+      numberOfImages: 0,
+    },
+    {
+      name: "WS House",
+      type: "Residential",
+      year: "2024",
+      location: "Taman Kopo Indah, Bandung",
+      area: "150 m",
+      scope: "Exterior",
+      numberOfImages: 0,
+    },
+    {
       name: "AW House",
       type: "Residential",
       year: "2020",
