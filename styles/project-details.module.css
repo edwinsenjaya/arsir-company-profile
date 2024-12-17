@@ -19,7 +19,14 @@
 
 .project-info {
   display: flex;
-  gap: 90px;
+  gap: 60px;
+}
+
+.top,
+.bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
 }
 
 .project-details {
@@ -61,8 +68,10 @@
     padding: 105px 60px 60px;
   }
 
-  .project-info {
-    gap: 35px;
+  .project-info,
+  .top,
+  .bottom {
+    gap: 30px;
   }
 }
 
@@ -73,11 +82,20 @@
 
   .project-info {
     flex-direction: column;
-    gap: 40px;
+  }
+
+  .top,
+  .bottom {
+    justify-content: center;
   }
 
   .project-name {
     font-size: 32px;
+  }
+
+  .title,
+  .info {
+    font-size: 13px;
   }
 
   .project-link {

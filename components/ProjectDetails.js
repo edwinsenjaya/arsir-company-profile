@@ -23,25 +23,29 @@ export default function ProjectDetails() {
     <section className={styles["project-details-container"]}>
       <h4 className={styles["project-name"]}>{project?.name}</h4>
       <section className={styles["project-info"]}>
-        <section className={styles["project-details"]}>
-          <h5 className={styles.title}>Type</h5>
-          <h5 className={styles.info}>{project?.type}</h5>
+        <section className={styles.top}>
+          <section className={styles["project-details"]}>
+            <h5 className={styles.title}>Type</h5>
+            <h5 className={styles.info}>{project?.type}</h5>
+          </section>
+          <section className={styles["project-details"]}>
+            <h5 className={styles.title}>Year</h5>
+            <h5 className={styles.info}>{project?.year}</h5>
+          </section>
+          <section className={styles["project-details"]}>
+            <h5 className={styles.title}>Location</h5>
+            <h5 className={styles.info}>{project?.location}</h5>
+          </section>
         </section>
-        <section className={styles["project-details"]}>
-          <h5 className={styles.title}>Year</h5>
-          <h5 className={styles.info}>{project?.year}</h5>
-        </section>
-        <section className={styles["project-details"]}>
-          <h5 className={styles.title}>Location</h5>
-          <h5 className={styles.info}>{project?.location}</h5>
-        </section>
-        <section className={styles["project-details"]}>
-          <h5 className={styles.title}>Total Area</h5>
-          <h5 className={styles.info}>{project?.area}&#xB2;</h5>
-        </section>
-        <section className={styles["project-details"]}>
-          <h5 className={styles.title}>Scope</h5>
-          <h5 className={styles.info}>{project?.scope}</h5>
+        <section className={styles.bottom}>
+          <section className={styles["project-details"]}>
+            <h5 className={styles.title}>Total Area</h5>
+            <h5 className={styles.info}>{project?.area}&#xB2;</h5>
+          </section>
+          <section className={styles["project-details"]}>
+            <h5 className={styles.title}>Scope</h5>
+            <h5 className={styles.info}>{project?.scope}</h5>
+          </section>
         </section>
       </section>
       <Image
