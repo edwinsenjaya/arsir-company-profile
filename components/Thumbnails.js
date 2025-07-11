@@ -162,13 +162,42 @@ export default function Thumbnails() {
       numberOfImages: 4,
     },
     {
-      name: "RT House",
-      type: "Town House",
+      name: "RT Townhouse",
+      type: "Townhouse",
       year: "2023",
       location: "Setraduta, Bandung",
       area: "270 m",
       scope: "Exterior",
       numberOfImages: 4,
+    },
+    {
+      name: "FK Coliving",
+      type: "Coliving",
+      year: "2024",
+      location: "Yogyakarta, DIY",
+      area: "200 m",
+      scope: "Exterior & Interior",
+      numberOfImages: 1,
+      hideOnDesktop: true,
+      hideOnMobile: true,
+    },
+    {
+      name: "PK Townhouse",
+      type: "Townhouse",
+      year: "2025",
+      location: "Cirebon, West Java",
+      area: "1800 m",
+      scope: "Masterplan & Exterior",
+      numberOfImages: 1,
+    },
+    {
+      name: "LV Coliving",
+      type: "Coliving",
+      year: "2025",
+      location: "Bandung, West Java",
+      area: "225 m",
+      scope: "Exterior & Interior",
+      numberOfImages: 1,
     },
   ]);
 
@@ -179,7 +208,10 @@ export default function Thumbnails() {
   const thumbnailImages = [];
   const projectList = [];
   for (let i = 0; i < projectsData.length; i++) {
-    if (!projectsData[i].hideOnMobile || screenWidth > 600) {
+    if (
+      !projectsData[i].hideOnMobile ||
+      (screenWidth > 600 && !projectsData[i].hideOnDesktop)
+    ) {
       thumbnailImages.push(
         <Link
           key={i}
